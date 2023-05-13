@@ -13,5 +13,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        int toastDurationInMilliSeconds = 10000;
+
+        Context context = getApplicationContext();
+        Toast mToastToShow = Toast.makeText(context, R.string.welcome_text, Toast.LENGTH_LONG);
+
+        CountDownTimer toastCountDown;
+        toastCountDown = new CountDownTimer(toastDurationInMilliSeconds, 1000 /*Tick duration*/) {
+            public void onTick(long millisUntilFinished) {
+                mToastToShow.show();
+            }
+            public void onFinish() {
+                mToastToShow.cancel();
+            }
+        };
+
+        // Show the toast and starts the countdown
+        mToastToShow.show();
+        toastCountDown.start();
     }
 }
