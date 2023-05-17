@@ -3,9 +3,14 @@ package com.example.aboutme;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,5 +37,21 @@ public class MainActivity extends AppCompatActivity {
         // Show the toast and starts the countdown
         mToastToShow.show();
         toastCountDown.start();
+
+        TextView textView = findViewById(R.id.dataText);
+
+        try {
+            AssetManager assetManager = getAssets();
+            InputStream inputStream = assetManager.open("data.txt");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+
+            String text = new String(buffer);
+            textView.setText(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
