@@ -23,7 +23,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/orange"
+                android:background="?colorPrimary"
                 android:paddingStart="8dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="8dp"
@@ -45,8 +45,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="@string/subject_name"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,18 +58,18 @@
                     android:layout_width="50dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:background="#00FFFFFF"
-                    android:contentDescription="mail"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="call"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:scaleType="fitCenter"
                     android:src="@android:drawable/stat_sys_phone_call"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toBottomOf="@+id/textView"
-                    app:tint="@color/red" />
+                    app:tint="@color/white" />
 
                 <ImageButton
                     android:id="@+id/emailButton"
@@ -75,15 +78,15 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:background="#00FFFFFF"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="mail"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:scaleType="fitCenter"
                     android:src="@android:drawable/ic_dialog_email"
+                    app:tint="@color/white"
                     app:layout_constraintStart_toEndOf="@+id/phoneButton"
-                    app:layout_constraintTop_toTopOf="@+id/phoneButton"
-                    app:tint="@color/red" />
+                    app:layout_constraintTop_toTopOf="@+id/phoneButton" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
