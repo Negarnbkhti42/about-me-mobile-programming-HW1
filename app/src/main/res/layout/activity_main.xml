@@ -53,6 +53,13 @@
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/themeSwitcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
                 <ImageButton
                     android:id="@+id/phoneButton"
                     android:layout_width="50dp"
@@ -84,26 +91,25 @@
                     android:paddingEnd="8dp"
                     android:scaleType="fitCenter"
                     android:src="@android:drawable/ic_dialog_email"
-                    app:tint="@color/white"
                     app:layout_constraintStart_toEndOf="@+id/phoneButton"
-                    app:layout_constraintTop_toTopOf="@+id/phoneButton" />
+                    app:layout_constraintTop_toTopOf="@+id/phoneButton"
+                    app:tint="@color/white" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/dataText"
-                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.5"
                 android:paddingStart="8dp"
                 android:paddingTop="4dp"
                 android:paddingEnd="8dp"
                 android:paddingBottom="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textSize="15sp" />
 
         </LinearLayout>
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

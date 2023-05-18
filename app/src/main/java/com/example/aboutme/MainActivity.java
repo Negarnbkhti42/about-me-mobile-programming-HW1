@@ -3,6 +3,7 @@ package com.example.aboutme;
 import static java.net.Proxy.Type.HTTP;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +12,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -85,6 +89,18 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(Intent.createChooser(intent, ""));
                 } catch (Exception e) {
                     Toast.makeText(context, "exception occurred", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        SwitchMaterial themeSwitcher = findViewById(R.id.themeSwitcher);
+        themeSwitcher.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 }
             }
         });
