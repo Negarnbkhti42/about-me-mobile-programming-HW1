@@ -35,10 +35,13 @@ public class MainActivity extends AppCompatActivity {
         Toast mToastToShow = Toast.makeText(context, R.string.welcome_text, Toast.LENGTH_LONG);
 
         CountDownTimer toastCountDown;
-        toastCountDown = new CountDownTimer(toastDurationInMilliSeconds, 1000 /*Tick duration*/) {
-            public void onTick(long millisUntilFinished) {
+        toastCountDown = new CountDownTimer(toastDurationInMilliSeconds, 1000) {
+            @Override
+            public void onTick(long l) {
                 mToastToShow.show();
             }
+
+            @Override
             public void onFinish() {
                 mToastToShow.cancel();
             }
@@ -104,5 +107,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private Toast mToastToShow;
+    public void showToast() {
+        // Set the toast and duration
+        int toastDurationInMilliSeconds = 10000;
+        mToastToShow = Toast.makeText(this, "Hello world, I am a toast.", Toast.LENGTH_LONG);
+
+        // Set the countdown to display the toast
+        CountDownTimer toastCountDown;
+        toastCountDown = new CountDownTimer(toastDurationInMilliSeconds, 1000 /*Tick duration*/) {
+            public void onTick(long millisUntilFinished) {
+                mToastToShow.show();
+            }
+            public void onFinish() {
+                mToastToShow.cancel();
+            }
+        };
+
+        // Show the toast and starts the countdown
+        mToastToShow.show();
+        toastCountDown.start();
     }
 }
