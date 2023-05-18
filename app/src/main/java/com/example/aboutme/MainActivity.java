@@ -1,5 +1,7 @@
 package com.example.aboutme;
 
+import static java.net.Proxy.Type.HTTP;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -62,9 +64,28 @@ public class MainActivity extends AppCompatActivity {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:123456789"));
-                startActivity(callIntent);
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:123456789"));
+
+                try {
+                    startActivity(callIntent);
+                } catch (Exception e) {
+                    Toast.makeText(context, "exception occurred", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        ImageButton emailButton = findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"norob35@gmail.com"});
+                try {
+                    startActivity(Intent.createChooser(intent, ""));
+                } catch (Exception e) {
+                    Toast.makeText(context, "exception occurred", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
