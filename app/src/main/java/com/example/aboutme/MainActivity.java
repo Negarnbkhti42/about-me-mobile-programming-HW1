@@ -98,24 +98,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         SwitchMaterial themeSwitcher = findViewById(R.id.themeSwitcher);
-
-//        themeSwitcher.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int nightModeFlags =
-//                        view.getContext().getResources().getConfiguration().uiMode &
-//                                Configuration.UI_MODE_NIGHT_MASK;
-//                switch (nightModeFlags) {
-//                    case Configuration.UI_MODE_NIGHT_YES:
-//                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-//                        themeSwitcher.setImageResource(R.drawable.ic_moon);
-//                        break;
-//                    case Configuration.UI_MODE_NIGHT_NO:
-//                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-//                        themeSwitcher.setImageResource(R.drawable.ic_sun);
-//                }
-//            }
-//        });
         themeSwitcher.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
