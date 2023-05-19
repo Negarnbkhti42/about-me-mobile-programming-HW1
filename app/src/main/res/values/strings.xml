@@ -2,7 +2,7 @@
     <string name="app_name">About Me</string>
     <string name="welcome_text">Welcome!</string>
     <string name="avatar_description">myAvatar</string>
-    <string name="subject_name">Negar Nobakhti SabzevarianZade</string>
+    <string name="subject_name">Negar Nobakhti Sabzevarianzade</string>
     <string name="call_description">call</string>
     <string name="mail_description">email</string>
 </resources>

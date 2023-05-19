@@ -1,6 +1,5 @@
 package com.example.aboutme;
 
-import static java.net.Proxy.Type.HTTP;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -8,6 +7,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.io.IOException;
@@ -97,6 +98,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
         SwitchMaterial themeSwitcher = findViewById(R.id.themeSwitcher);
+
+//        themeSwitcher.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                int nightModeFlags =
+//                        view.getContext().getResources().getConfiguration().uiMode &
+//                                Configuration.UI_MODE_NIGHT_MASK;
+//                switch (nightModeFlags) {
+//                    case Configuration.UI_MODE_NIGHT_YES:
+//                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//                        themeSwitcher.setImageResource(R.drawable.ic_moon);
+//                        break;
+//                    case Configuration.UI_MODE_NIGHT_NO:
+//                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+//                        themeSwitcher.setImageResource(R.drawable.ic_sun);
+//                }
+//            }
+//        });
         themeSwitcher.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {

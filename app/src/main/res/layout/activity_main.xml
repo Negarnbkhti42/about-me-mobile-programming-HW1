@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +37,7 @@
                     android:contentDescription="@string/avatar_description"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/themeSwitcher"
                     app:shapeAppearanceOverlay="@style/circleImageView"
                     app:srcCompat="@drawable/subject_photo" />
 
@@ -44,23 +45,23 @@
                     android:id="@+id/textView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:ellipsize="end"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:text="@string/subject_name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/themeSwitcher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/phoneButton"
