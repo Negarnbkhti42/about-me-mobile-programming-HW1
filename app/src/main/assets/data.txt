@@ -1,3 +1,7 @@
 My name is Negar Nobakhti, 22 year old student at sharif university of technology, studying computer engineering. I'm originaly from Khuzestan, a province in the south of Iran. I recently moved to Tehran to pursue my education.
-So why did i choose to study computer engineering? I have no solid answer to that. Maybe at the beginning it was more about entering a field with a good carrer opportunity for women, though I desired to study engineering from the beginning. I love the problem solving notion of this field; But now I can't imagine myself studying anything else. 
-I have chosen Frontend development as my field of speciality. I dont' have much hand in design, but I love creating interfaces, or any interactable tool of that kind.
+
+So why did i choose to study computer engineering? I have no solid answer to that. Maybe at the beginning it was more about entering a field with a good carrer opportunity for women, though I desired to study engineering from the beginning. I love the problem solving notion of this field; But now I can't imagine myself studying anything else.
+
+I have chosen Frontend development as my field of speciality. I don't have much hand in design, but I love creating interfaces, or any interactable tool of that kind. My research interest is also in the related field of Human-computer interaction.
+
+My other hobbies include swimming, reading and watching movies. My favorite book genre would be historical and magical-realism (yes, I'm pointing out at Garcia Markez). I've been swimming since I was a kid. I was on a team for some time too. My favorite director would be the great Stanley Kubrick. I fell in love with him since watching the very first work by him, Doctor Strangelove.

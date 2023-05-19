@@ -73,13 +73,13 @@
                     android:adjustViewBounds="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="@string/call_description"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:scaleType="fitCenter"
                     android:src="@android:drawable/stat_sys_phone_call"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toBottomOf="@+id/textView"
-                    app:tint="@color/white" />
+                    app:tint="?colorSecondaryVariant" />
 
                 <ImageButton
                     android:id="@+id/emailButton"
@@ -90,13 +90,13 @@
                     android:adjustViewBounds="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="@string/mail_description"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
                     android:scaleType="fitCenter"
                     android:src="@android:drawable/ic_dialog_email"
                     app:layout_constraintStart_toEndOf="@+id/phoneButton"
                     app:layout_constraintTop_toTopOf="@+id/phoneButton"
-                    app:tint="@color/white" />
+                    app:tint="?colorSecondaryVariant" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
